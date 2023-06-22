@@ -1,0 +1,21 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "rdbg",
+      "name": "Start Debug Docker",
+      "request": "attach",
+      "debugPort": "9229",
+      "localfsMap": "/app:${workspaceFolder}"
+    },
+    {
+      "type": "rdbg",
+      "name": "Start Debug Local",
+      "request": "attach",
+      "debugPort": "9229",
+    }
+  ]
+}
