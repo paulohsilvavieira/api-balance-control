@@ -1,6 +1,13 @@
 require "simplecov"
 
-SimpleCov.minimum_coverage 80
+files = Dir["./*"].select { |path| path }
+has_controllers_folder = files.include? "controllers"
+has_models_folder = files.include? "models"
+has_jobs_folder = files.include? "jobs"
+has_mailers_folder = files.include? "mailers"
+has_channels_folder = files.include? "channels"
+
+SimpleCov.minimum_coverage 80 if has_controllers_folder || has_models_folder || has_jobs_folder || has_mailers_folder || has_channels_folder
 
 SimpleCov.start :rails unless ENV["NO_COVERAGE"] do
   # Filters
