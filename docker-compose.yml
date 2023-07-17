@@ -9,23 +9,23 @@ services:
       - '3000:3000'
       - '9229:9229'
     depends_on:
-      - api_rails_db
+      - api-balance-control-db
     environment:
-      - DB_USERNAME=postgres
-      - DB_PASSWORD=admin
-      - DB_HOST=api_rails_db
-      - DB_PORT=5432
+      - DATABASE_USERNAME=postgres
+      - DATABASE_PASSWORD=admin
+      - DATABASE_HOST=api-balance-control-db
+      - DATABASE_PORT=5432
     volumes:
       - .:/app
       - gem_cache:/usr/local/bundle/gems
-  api_rails_db:
+  api-balance-control-db:
     image: postgres:alpine3.16
-    container_name: api_rails_db
+    container_name: api-balance-control-db
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin
     volumes:
-      - ${HOME}/docker/postgresql/api_rails_db:/var/lib/postgresql:z
+      - ${HOME}/docker/postgresql/api-balance-control-db:/var/lib/postgresql:z
     ports:
       - "55433:5432"
     healthcheck:

@@ -6,6 +6,9 @@
 
 # Ignore bundler config.
 /.bundle
+/node_modules
+/coverage
+.env
 
 # Ignore all logfiles and tempfiles.
 /log/*

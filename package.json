@@ -1,0 +1,21 @@
+{
+  "name": "api-balance-control",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "main": "commitlint.config.js",
+  "scripts": {
+    "lint": "rubocop -a -c .rubocop.yml --fail-level E",
+    "test": "NO_COVERAGE=true bundle exec rspec",
+    "test:cov": "bundle exec rspec",
+    "prepare": "husky install"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "git-commit-msg-linter": "^5.0.4"
+  }
+}
