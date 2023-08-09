@@ -3,6 +3,7 @@ require:
   - rubocop-rspec
 
 AllCops:
+  TargetRubyVersion: 3.2
   NewCops: enable
   SuggestExtensions: false
   Exclude:
@@ -75,4 +76,7 @@ RSpec/Rails/InferredSpecType:
   Enabled: false
 
 RSpec/FilePath:
+  Enabled: false
+  
+Rails/HasManyOrHasOneDependent:
   Enabled: false
