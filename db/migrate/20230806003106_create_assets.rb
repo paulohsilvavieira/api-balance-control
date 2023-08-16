@@ -3,7 +3,7 @@ class CreateAssets < ActiveRecord::Migration[7.0]
     create_table :assets, id: :uuid do |t|
       t.string :name
       t.string :code
-      t.string :type
+      t.string :category
       t.timestamps
     end
   end
